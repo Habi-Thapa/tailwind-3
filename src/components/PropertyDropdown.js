@@ -21,14 +21,14 @@ const PropertyDropdown = () => {
     <Menu as="div" className="dropdown">
       <Menu.Button
         onClick={() => setIsOpen((toogle) => !toogle)}
-        className="dropdown-btn  w-full text-left"
+        className="w-full text-left dropdown-btn"
       >
         <RiHome5Line className="dropdown-icon-primary" />
         <div>
           <div className="text-[15px] font-medium leading-tight">
             {property}
           </div>
-          <div className="text-[13px] ">Select your place</div>
+          <div className="text-[13px] ">Select your property type</div>
         </div>
         {isOpen ? (
           <RiArrowUpSLine className="dropdown-icon-secondary" />
@@ -43,7 +43,7 @@ const PropertyDropdown = () => {
               onClick={() => setProperty(property)}
               as="li"
               key={index}
-              className="cursor-pointer hover:text-violet-700 transition"
+              className="transition cursor-pointer hover:text-violet-700"
             >
               {property}
             </Menu.Item>
